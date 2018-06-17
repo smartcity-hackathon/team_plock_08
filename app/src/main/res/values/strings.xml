@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">aplikacja</string>
+    <string name="btn_region">Obszar</string>
+    <string name="btn_route">Droga</string>
+    <string name="btn_point">Punkt</string>
+    <string name="btn_cancel">Anuluj</string>
+    <string name="add_point">Zaznacz punkt na mapie</string>
+    <string name="add_route_A">Zaznacz punkt początkowy</string>
+    <string name="add_route_B">Zaznacz punkt końcowy</string>
+    <string name="add_region_first">Zaznacz punkt środkowy</string>
+    <string name="add_region_expand">Dopasuj obszar</string>
+    <string name="not_title">Nowe zdarzenie w pobliżu</string>
+    <string name="not_def_text">Default Text</string>
+    <string name="accept">Zatwierdź</string>
+    <string name="decline">Anuluj</string>
+
+    <string-array name="categories">
+        <item>Wypadek</item>
+        <item>Blokada drogi</item>
+        <item>Akty wandalizmu</item>
+        <item>Uszkodzenia na drodze</item>
+        <item>Bezpańskie zwierzęta</item>
+        <item>Utrudnienia ruchu</item>
+        <item>Zmiana rozkładu</item>
+        <item>Zmiana organizacji ruchu</item>
+        <item>Inne</item>
+    </string-array>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+</resources>

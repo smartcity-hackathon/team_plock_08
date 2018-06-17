@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pckg.MainActivity">
+
+    <fragment
+        android:id="@+id/mapfragment"
+        class="com.here.android.mpa.mapping.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/main_collapse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/collapsableLinear"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/btn_back2"
+                    android:paddingLeft="8dp"
+                    android:text="@string/btn_region" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/floatingActionButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:onClick="getRegion"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="@color/colorMapBtn"
+                    app:srcCompat="@android:drawable/ic_menu_add" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/btn_back2"
+                    android:paddingLeft="12dp"
+                    android:text="@string/btn_route" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/floatingActionButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:onClick="getRoute"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="@color/colorMapBtn"
+                    app:srcCompat="@android:drawable/ic_menu_add" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/btn_back2"
+                    android:paddingLeft="14dp"
+                    android:text="@string/btn_point" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/floatingActionButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:onClick="getPoint"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="@color/colorMapBtn"
+                    app:srcCompat="@android:drawable/ic_menu_add" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="addNew"
+            android:tint="@android:color/white"
+            app:backgroundTint="@color/colorMapBtn"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_zaznacz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@string/add_point"
+        android:textSize="28sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/point_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="26dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/point_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:onClick="pointAccept"
+            android:text="@string/accept" />
+
+        <Button
+            android:id="@+id/point_decline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:onClick="pointDecline"
+            android:text="@string/decline" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="horizontal">
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:background="@android:color/background_light">
+
+        </SearchView>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|left"
+            android:background="@android:color/background_light"
+            android:tint="@color/tak"
+            app:srcCompat="@android:drawable/sym_action_email" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|left"
+            android:background="@android:color/background_light"
+            android:tint="@color/tak3"
+            app:srcCompat="@android:drawable/ic_menu_preferences" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="24dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+    <RelativeLayout
+        android:id="@+id/show_marker"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="12dp"
+        android:background="@android:color/background_light">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            app:srcCompat="@drawable/blank" />
+
+        <TextView
+            android:id="@+id/txtKategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/null"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toLeftOf="@+id/img"
+            android:text="Kategoria"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/txtOpis"
+            android:layout_width="282dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtKategoria"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/txtKategoria"
+            android:layout_below="@+id/img"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginLeft="66dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/textView7"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:text="Opis:" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
